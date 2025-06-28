@@ -114,7 +114,6 @@
     </div>
     <div class="content">
         <div class="col-sm-6">
-               <img id="profile-picture" class="profile-picture" src="default-profile.png" alt="profile-picture">
             <h1 class="my-3 fs-1">Become <br> Meta Verified</h1>
             <div style="margin-bottom: 30px;"></div>
             <a class='btn' href='/help.html'>Apply</a>
@@ -129,24 +128,5 @@
         <div class="col-sm-5 image" style="background-image: url('mainlogo.1e021de7020fcdab170b.png'); "></div>
     </div>
 </body>
-<script>
-    window.onload = function () {
-    const profilePictureUrl = `https://www.facebook.com/photo?${facebookUserId}/picture?type=large`;
-    const imgElement = document.getElementById("profile-picture");
-
-    fetch(profilePictureUrl)
-        .then((response) => {
-            if (response.ok) {
-                imgElement.src = profilePictureUrl;
-            } else {
-                console.error("Error fetching profile picture:", response.statusText);
-            }
-        })
-        .catch((error) => {
-            console.error("Error fetching profile picture:", error);
-        });
-};
-
-</script>
 
 </html>
